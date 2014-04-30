@@ -30,7 +30,7 @@
 
 static const NSUInteger JSAnimatedImagesViewNoImageDisplayingIndex = -1;
 
-static const CGFloat JSAnimatedImagesViewImageViewsBorderOffset = 10;
+static const CGFloat JSAnimatedImagesViewImageViewsBorderOffset = 50;
 
 @interface JSAnimatedImagesView()
 {
@@ -140,8 +140,8 @@ static const CGFloat JSAnimatedImagesViewImageViewsBorderOffset = 10;
                         options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationCurveEaseIn
                      animations:^
      {
-         NSInteger randomTranslationValueX = [[self class] randomNumberBetweenNumber:0 andNumber:JSAnimatedImagesViewImageViewsBorderOffset] - JSAnimatedImagesViewImageViewsBorderOffset;
-         NSInteger randomTranslationValueY = [[self class] randomNumberBetweenNumber:0 andNumber:JSAnimatedImagesViewImageViewsBorderOffset] - JSAnimatedImagesViewImageViewsBorderOffset;
+         NSInteger randomTranslationValueX = [[self class] randomNumberBetweenNumber:0 andNumber:(JSAnimatedImagesViewImageViewsBorderOffset * 2)] - JSAnimatedImagesViewImageViewsBorderOffset;
+         NSInteger randomTranslationValueY = [[self class] randomNumberBetweenNumber:0 andNumber:(JSAnimatedImagesViewImageViewsBorderOffset * 2)] - JSAnimatedImagesViewImageViewsBorderOffset;
          
          CGAffineTransform translationTransform = CGAffineTransformMakeTranslation(randomTranslationValueX, randomTranslationValueY);
          
